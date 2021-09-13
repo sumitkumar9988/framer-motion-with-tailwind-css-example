@@ -26,6 +26,16 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      orange: colors.orange,
+      amber: colors.amber,
+      lime: colors.lime,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      violet: colors.violet,
+      fuchsia: colors.fuchsia,
+      rose: colors.rose
     },
     spacing: {
       px: "1px",
@@ -458,7 +468,12 @@ module.exports = {
       "4/6": "66.666667%",
       "5/6": "83.333333%",
       full: "100%",
-      screen: "100vh",
+      'screen': "100vh",
+      '2xscreen': "200vh",
+      '3xscreen': "300vh",
+      '4xscreen': "400vh",
+
+
     
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import gsap from "gsap";
-const SpotlightEffect = () => {
+const SpotlightEffect = ({tittle}) => {
   function handleMouseMove(evt) {
     const mouseX = evt.clientX;
     const mouseY = evt.clientY;
@@ -35,9 +35,11 @@ const SpotlightEffect = () => {
       <div
         id="cursor"
         class="fixed  w-8 h-8 select-none pointer-events-none rounded-full z-50 transform  mr-0 mb-0 -mt-4 -ml-4  "
-      ></div>
-      <div class="relative h-screen w-screen bg-gray-600 overflow-hidden">
-        <div className="absolute transform rounded-full">
+      >
+
+      </div>
+      <div class="relative h-28 w-88 mt-60 md:mt-80  bg-red-500 overflow-hidden">
+        <div className="absolute  transform rounded-full">
           <div
             id="shape1"
             class="absolute transform rounded-full  bg-blue-200 w-120 h-120 -mt-60 -ml-60 mr-0 mb-0"
@@ -52,10 +54,13 @@ const SpotlightEffect = () => {
           ></div>
         </div>
       </div>
-      <div class=" top-0 left-0 absolute flex justify-center items-center h-screen w-screen bg-white mix-blend-screen">
-        <h1 className="m-0  font-serif text-center text-5xl  lg:text-7xl  tracking-wide text-green-500  font-extrabold ">
-          Tailwind Animation Kit
-        </h1>
+      <div class="h-screen w-screen absolute  item-center justify-center flex top-0 left-0   ">
+        <div class="absolute  mix-blend-screen bg-white w-full h-80 mt-60 md:mt-80">
+          <h1 className="m-0  text-center text-5xl  lg:text-7xl  tracking-wide text-red-500  font-black ">
+            {tittle}
+          </h1>
+        </div>
+      
       </div>
     </div>
   );
@@ -63,5 +68,4 @@ const SpotlightEffect = () => {
 
 export default SpotlightEffect;
 
-
-
+// 
