@@ -6,21 +6,21 @@ import { motion, AnimatePresence } from "framer-motion";
 const Index = () => {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="h-screen bg-gradient-to-r from-orange-400 to-rose-400 flex pt-40 justify-center  ">
+    <div className="h-screen bg-gradient-to-r from-orange-400 to-rose-400 flex flex-column pt-40 justify-center  ">
       <div>
         <div className="block">
           <motion.div
-            className="h-20 w-80 rounded-lg shadow-xl block"
+            className="h-20 w-80 rounded-lg shadow-xl "
             initial={false}
             animate={{ backgroundColor: expanded ? "#212F3D" : "#FDFEFE" }}
             onClick={() => setExpanded(expanded ? false : true)}
           />
         </div>
-        <div className="block">
+        <div className="">
           <AnimatePresence initial={false}>
             {expanded && (
               <motion.div
-                className=" overflow-hidden  mt-4 block"
+                className=" overflow-hidden  mt-4 "
                 key="content"
                 initial="collapsed"
                 animate="open"
