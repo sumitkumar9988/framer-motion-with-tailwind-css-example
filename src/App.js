@@ -8,6 +8,11 @@ import ScrollEffect from './components/animation/ScrollEffect.js'
 import ScrollEffect2 from './components/animation/ScrollEffect2.js'
 import AutoNavbar from './components/animation/AutoNavbar'
 import MenuHover from './components/animation/MenuHover'
+import Toggle from './components/animation/Toggle'
+import ItemDelete from './components/animation/ItemDelete'
+import ScrollEffect3 from './components/animation/ScrollEffect3.js'
+import ScrollProgress from './components/animation/ScrollProgress'
+import Parallax from './components/animation/Parallax'
 
 
 
@@ -15,15 +20,21 @@ import MenuHover from './components/animation/MenuHover'
 function App() {
   return (
     <div className="">
-      {/* <AutoNavbar/> */}
-      <SpotlightEffect tittle="Pfolio Animation Kit"/>
-      <Animate/>
-      <Propagation/>
-      <Orchestration/>
-      <Drag/>
-      <Accordin/>
-      <ScrollEffect/>
-      <MenuHover/>
+      {/* <AutoNavbar/>  */}
+      {/* <SpotlightEffect tittle="Pfolio Animation Kit"/> */}
+      {/* <Animate/> */}
+      {/* <Propagation/> */}
+      {/* <Orchestration/> */}
+      {/* <Drag/> */}
+      {/* <Accordin/> */}
+      {/* <ScrollEffect/> */}
+      {/* <MenuHover/> */}
+      {/* <Toggle/>   */}
+      {/* <ScrollEffect2/>  */}
+      {/* <ItemDelete/>  */}
+      {/* <ScrollEffect3/> */}
+      {/* <ScrollProgress/> */}
+      <Parallax/>
     </div>
   );
 }

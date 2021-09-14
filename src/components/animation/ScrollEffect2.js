@@ -1,62 +1,20 @@
-import React, { useRef, useState, useLayoutEffect, useCallback } from "react"
-import ResizeObserver from "resize-observer-polyfill"
-import {
-  motion,
-  useViewportScroll,
-  useTransform,
-  useSpring
-} from "framer-motion"
+import React from "react"
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const SmoothScroll = () => {
-  const scrollRef = useRef(null)
-  const ghostRef = useRef(null)
-  const [scrollRange, setScrollRange] = useState(0)
-  const [viewportW, setViewportW] = useState(0)
 
-  useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth)
-  }, [scrollRef])
-
-  const onResize = useCallback(entries => {
-    for (let entry of entries) {
-      setViewportW(entry.contentRect.width)
-    }
-  }, [])
-
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(entries => onResize(entries))
-    resizeObserver.observe(ghostRef.current)
-    return () => resizeObserver.disconnect()
-  }, [onResize])
-
-  const { scrollYProgress } = useViewportScroll()
-  const transform = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, -scrollRange + viewportW]
-  )
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 }
-  const spring = useSpring(transform, physics)
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 0.1], [0.9, 1.1]);
+  const rotateX = useTransform(scrollYProgress, [0, 0.1], [10, 0]);
 
   return (
-    <>
-      <div className="bg-gradient-to-r from-orange-400 to-rose-400 min-h-screen">
-        <motion.section
-          ref={scrollRef}
-          style={{ x: spring }}
-          className="thumbnails-container"
-        >
-          <div className="thumbnails">
-            <div className="thumbnail" />
-            <div className="thumbnail" />
-            <div className="thumbnail" />
-           
-          </div>
-        </motion.section>
-      </div>
-      <div ref={ghostRef} style={{ height: scrollRange }} className="ghost" />
-    </>
-  )
+    <div className="h-2xscreen bg-gradient-to-r from-orange-400 to-rose-400 flex justify-start  items-center flex-col overflow-hidden">
+      <motion.div
+        className="w-8/12 h-96 bg-white  rounded-lg mt-60"
+        style={{  scale, rotateX,transformPerspective: 150 }}
+      >
+      </motion.div>
+    </div>)
 }
 
 export default SmoothScroll

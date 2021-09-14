@@ -217,6 +217,7 @@ module.exports = {
       text: "text",
       move: "move",
       help: "help",
+      grab: 'grab',
       "not-allowed": "not-allowed",
     },
     divideColor: (theme) => theme("borderColor"),
