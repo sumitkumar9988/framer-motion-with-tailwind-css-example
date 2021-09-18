@@ -12,7 +12,13 @@ import Toggle from './components/animation/Toggle'
 import ItemDelete from './components/animation/ItemDelete'
 import ScrollEffect3 from './components/animation/ScrollEffect3.js'
 import ScrollProgress from './components/animation/ScrollProgress'
-import Parallax from './components/animation/Parallax'
+import Testimonial from './components/animation/Testimonial'
+import ImageGallery from './components/animation/ImageGallery'
+import Wheel from './components/animation/Wheel'
+import Navbar from './components/animation/Navbar'
+import SwipeSidebar from './components/animation/SwipeSidebar'
+
+
 
 
 
@@ -34,7 +40,11 @@ function App() {
       {/* <ItemDelete/>  */}
       {/* <ScrollEffect3/> */}
       {/* <ScrollProgress/> */}
-      <Parallax/>
+      {/* <Testimonial/> */}
+      {/* <ImageGallery/> */}
+      {/* <Wheel/> */}
+      {/* <Navbar/> */}
+      <SwipeSidebar/>
     </div>
   );
 }
