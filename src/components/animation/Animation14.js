@@ -18,7 +18,7 @@ const Index = () => {
   };
 
   return (
-    <div className="  h-screen w-screen bg-gradient-to-r from-orange-400 to-rose-400 flex overflow-x-hidden items-center justify-center">
+    <div className="  h-2xscreen w-screen bg-gradient-to-r from-orange-400 to-rose-400 flex overflow-x-hidden items-center justify-center">
       <div className=" ">
         <div className="sticky top-0 w-120 h-40 ">
           <motion.div
